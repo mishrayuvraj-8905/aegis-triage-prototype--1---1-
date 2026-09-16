@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #16211F;
+}
+
+::selection {
+  background: #134646;
+  color: #F6F3EC;
+}
+
+@keyframes blip {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+.blip-dot {
+  animation: blip 1.4s ease-in-out infinite;
+}
+
+@layer components {
+  .input {
+    @apply w-full rounded-md border border-line bg-paper px-3 py-2 text-sm text-ink placeholder:text-subink/60 focus:border-teal-600 focus:outline-none focus:ring-1 focus:ring-teal-600;
+  }
+}
